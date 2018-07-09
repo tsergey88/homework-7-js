@@ -1,0 +1,18 @@
+.item {
+    text-align: center;
+    margin-bottom: 20px;
+}.margin-section {
+    margin-top: 5%;
+}
+.load-more-btn {
+    margin: 50px auto 100px auto;
+    text-align: center;
+}
+.hide-btn {
+    visibility: hidden;
+}
+.show-btn {
+    visibility: visible;
+}.item-block {
+    margin-top: 5%;
+}
