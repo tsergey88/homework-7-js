@@ -13,7 +13,7 @@ export default class Header extends Component {
                     <Navbar.Toggle />
                 </Navbar.Header>
                 <Navbar.Collapse>
-                    <ul className='nav nav-pills navbar-nav'>
+                    <ul className="nav nav-pills navbar-nav">
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/captured-pokemons">Captured Pokemons</Link></li>
                     </ul>
