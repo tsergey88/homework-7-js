@@ -8,19 +8,19 @@ export default class PokemonItem extends Component {
         super(props);
 
         this.state = {
-			isCaptured: false,
+          isCaptured: false,
         };
     }
 	
 	addToCaptured = () => {
-        const { name, id } = this.props;
-        const pokemonId = id;
+    const { name, id } = this.props;
+    const pokemonId = id;
 		const moment = require('moment');
-        const dateCaptured = moment().format('MMMM Do YYYY, h:mm a');        
+    const dateCaptured = moment().format('MMMM Do YYYY, h:mm a');        
 
 		this.setState({ 
 			isCaptured: true,
-        });
+    });
         
 		fetch('http://localhost:3000/captured_pokemons', {
 			method: 'POST',
