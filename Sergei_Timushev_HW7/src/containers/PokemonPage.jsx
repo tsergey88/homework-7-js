@@ -17,33 +17,26 @@ export default class PokemonPage extends Component {
 
 	loadItem() {
 		const { id } = this.state;
-		fetch(`http://localhost:3000/pokemons/${id}`)
+		fetch(`http://localhost:3000/pokemons/${id}/?_embed=captured_pokemons`)
 			.then((response) => response.json())
 			.then((result) => {
-				this.setState({ 
-					name: result.name,
-				});
-			})
-	}
-
-	setStatus() {
-		const { id } = this.state;
-		fetch('http://localhost:3000/captured_pokemons')
-			.then((response) => response.json( ))
-			.then ((result) => {
-				if ( (result.filter(x => x.id == id)).length > 0 ) {
-					this.setState({ 
+				if (result.captured_pokemons.length > 0) {
+					this.setState({
+						name: result.name,
 						status: 'Caught',
 						captured: true,
-						dateCaptured: result.filter(x => x.id == id)[0].dateCaptured,
+						dateCaptured: result.captured_pokemons[0].dateCaptured,						
 					});
-				}
+				} else {
+					this.setState({ 
+						name: result.name,
+					});
+				}				
 			})
 	}
 	
 	componentDidMount() {
-		this.loadItem();
-		this.setStatus();		
+		this.loadItem();		
 	}
 
 	render() {

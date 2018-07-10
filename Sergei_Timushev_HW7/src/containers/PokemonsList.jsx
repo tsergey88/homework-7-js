@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import PokemonsListRender from '../components/PokemonsListRender';
 
 export default class PokemonsList extends Component {
+    static defaultProps = {
+        url: 'http://localhost:3000/pokemons'
+    }
+
     constructor(props) {
         super(props);
 
@@ -14,22 +18,18 @@ export default class PokemonsList extends Component {
 
     loadPokemons = () => {
         const { page, pokemons } = this.state;
-        let { url } = this.props;
-        if (!url) {
-            url = 'http://localhost:3000/pokemons'
-        }
-        fetch(`${url}?_limit=9&_page=${page}`)
+        fetch(`${this.props.url}?_limit=9&_page=${page}`)
             .then((response) => response.json())
             .then((result) => {
                 this.setState({ 
                     pokemons: pokemons.concat(result),
                     page: page + 1 
                 });
-                this.hideBtn(url, this.state.pokemons);
+                this.showBtn(this.props.url, this.state.pokemons);
             })
     }
 
-    hideBtn = (url, pokemons) => {
+    showBtn = (url, pokemons) => {
         fetch(`${url}`)
             .then((response) => response.json())
             .then((result) => {
@@ -51,7 +51,7 @@ export default class PokemonsList extends Component {
 
     render() {
         return (
-			<PokemonsListRender pokemons={this.state.pokemons} loadPokemons={this.loadPokemons} hideBtn={this.state.showBtn} />
+			<PokemonsListRender pokemons={this.state.pokemons} loadPokemons={this.loadPokemons} showBtn={this.state.showBtn} />
         );
     }
 }

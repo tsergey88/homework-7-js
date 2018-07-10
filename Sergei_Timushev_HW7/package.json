@@ -7,7 +7,7 @@
     "json-server": "json-server --watch db.json",
     "webpack-dev-server": "webpack-dev-server --mode development --watch",
     "dev": "concurrently --kill-others \"npm run json-server\" \"npm run webpack-dev-server\" ",
-    "build": "webpack --mode production",    
+    "build": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -31,6 +31,7 @@
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
+    "moment": "^2.22.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-router-dom": "^4.3.1"

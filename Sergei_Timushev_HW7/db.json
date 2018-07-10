@@ -1,31 +1,4 @@
 {
-  "captured_pokemons": [
-    {
-      "name": "bulbasaur",
-      "id": 1,
-      "dateCaptured": "10-7-2018, 0:5:11"
-    },
-    {
-      "name": "ivysaur",
-      "id": 2,
-      "dateCaptured": "10-7-2018, 0:5:13"
-    },
-    {
-      "name": "wartortle",
-      "id": 8,
-      "dateCaptured": "10-7-2018, 0:5:28"
-    },
-    {
-      "name": "venusaur",
-      "id": 3,
-      "dateCaptured": "10-7-2018, 0:8:20"
-    },
-    {
-      "name": "pidgey",
-      "id": 16,
-      "dateCaptured": "10-7-2018, 0:35:38"
-    }
-  ],
   "pokemons": [
     {
       "name": "bulbasaur",
@@ -3822,6 +3795,38 @@
     {
       "name": "magearna-original",
       "id": 10147
+    }
+  ],
+  "captured_pokemons": [
+    {
+      "name": "bulbasaur",
+      "id": 1,
+      "dateCaptured": "July 10th 2018, 1:36",
+      "pokemonId": 1
+    },
+    {
+      "name": "ivysaur",
+      "id": 2,
+      "dateCaptured": "July 10th 2018, 1:36 pm",
+      "pokemonId": 2
+    },
+    {
+      "name": "venusaur",
+      "id": 3,
+      "dateCaptured": "July 10th 2018, 1:36 pm",
+      "pokemonId": 3
+    },
+    {
+      "name": "charmander",
+      "id": 4,
+      "dateCaptured": "July 10th 2018, 1:37 pm",
+      "pokemonId": 4
+    },
+    {
+      "name": "metapod",
+      "id": 11,
+      "dateCaptured": "July 10th 2018, 1:40 pm",
+      "pokemonId": 11
     }
   ]
 }

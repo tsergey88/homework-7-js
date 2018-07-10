@@ -12,16 +12,19 @@ export default class PokemonItem extends Component {
         };
     }
 	
-	AddToCaptured = () => {
-		const { name, id } = this.props,
-			today = new Date(),
-			dateCaptured = today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear() + ', ' + today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
+	addToCaptured = () => {
+        const { name, id } = this.props;
+        const pokemonId = id;
+		const moment = require('moment');
+        const dateCaptured = moment().format('MMMM Do YYYY, h:mm a');        
+
 		this.setState({ 
 			isCaptured: true,
-		});
+        });
+        
 		fetch('http://localhost:3000/captured_pokemons', {
 			method: 'POST',
-			body: JSON.stringify({name, id, dateCaptured}),
+			body: JSON.stringify({name, id, dateCaptured, pokemonId}),
 			headers: {
 				'Content-Type': 'application/json'
 			}
@@ -31,7 +34,7 @@ export default class PokemonItem extends Component {
 	componentDidMount() { 
 		const { id } = this.props;
 		fetch('http://localhost:3000/captured_pokemons')
-			.then((response) => response.json( ))
+			.then((response) => response.json())
 			.then ((result) => {
 				if ( (result.filter(x => x.id === id)).length > 0 ) {
 					this.setState({ 
@@ -44,7 +47,7 @@ export default class PokemonItem extends Component {
     render() {
         const { name, id } = this.props;
         return(
-            <PokemonRender name={name} id={id} isCaptured={this.state.isCaptured} AddToCaptured={this.AddToCaptured} />
+            <PokemonRender name={name} id={id} isCaptured={this.state.isCaptured} addToCaptured={this.addToCaptured} />
         )
     }
 
