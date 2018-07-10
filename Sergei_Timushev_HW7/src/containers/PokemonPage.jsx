@@ -7,13 +7,13 @@ export default class PokemonPage extends Component {
 		super(props);
     
 		this.state = {
-		    name: '',
-		    id: props.match.params.id,
-		    captured: false,
-		    status: 'Don`t be caught',
-		    dateCaptured: '',
+		  name: '',
+		  id: props.match.params.id,
+		  captured: false,
+		  status: 'Don`t be caught',
+		  dateCaptured: '',
 		};
-	  }
+	}
 
 	loadItem() {
 		const { id } = this.state;
@@ -28,9 +28,9 @@ export default class PokemonPage extends Component {
 						dateCaptured: result.captured_pokemons[0].dateCaptured,						
 					});
 				} else {
-					this.setState({ 
-						name: result.name,
-					});
+					  this.setState({ 
+						  name: result.name,
+					  });
 				}				
 			})
 	}

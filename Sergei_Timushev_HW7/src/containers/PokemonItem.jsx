@@ -5,12 +5,12 @@ import PokemonRender from '../components/PokemonRender'
 export default class PokemonItem extends Component {
 
 	constructor(props) {
-        super(props);
+    super(props);
 
-        this.state = {
-          isCaptured: false,
-        };
-    }
+    this.state = {
+      isCaptured: false,
+    };
+  }
 	
 	addToCaptured = () => {
     const { name, id } = this.props;
@@ -44,11 +44,10 @@ export default class PokemonItem extends Component {
 			})
     }
     
-    render() {
-        const { name, id } = this.props;
-        return(
-            <PokemonRender name={name} id={id} isCaptured={this.state.isCaptured} addToCaptured={this.addToCaptured} />
-        )
-    }
-
+  render() {
+    const { name, id } = this.props;
+    return(
+      <PokemonRender name={name} id={id} isCaptured={this.state.isCaptured} addToCaptured={this.addToCaptured} />
+    )
+  }
 }
