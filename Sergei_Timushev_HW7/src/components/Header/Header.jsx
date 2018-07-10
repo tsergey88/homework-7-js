@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import Navbar from 'react-bootstrap/lib/Navbar';
 
 export default class Header extends Component {
-	render() {
-		return (
+  render() {
+    return (
       <Navbar inverse collapseOnSelect fixedTop>
         <Navbar.Header>
           <Navbar.Brand>
@@ -19,6 +19,6 @@ export default class Header extends Component {
           </ul>
         </Navbar.Collapse>
       </Navbar>
-		);
-	}
+    );
+  }
 }

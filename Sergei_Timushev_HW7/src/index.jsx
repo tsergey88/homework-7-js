@@ -8,18 +8,18 @@ import PokemonPage from './containers/PokemonPage.jsx'
 import Captured from './components/Captured'
 
 class App extends Component {
-	render() {
-		return (
-			<Fragment>
+  render() {
+    return (
+      <Fragment>
         <Header />
         <Switch>
           <Route exact path='/' component={PokemonsList} />
           <Route exact path='/pokemon/:id' component={PokemonPage} />
           <Route exact path='/captured-pokemons' component={Captured}/>
-			  </Switch>
-			</Fragment>
-		);
-	}
+        </Switch>
+      </Fragment>
+    );
+  }
 }
 
 ReactDom.render(<BrowserRouter><App /></BrowserRouter>,document.getElementById('app'));

@@ -11,7 +11,6 @@ import Col  from 'react-bootstrap/lib/Col';
 export default class PokemonsListRender extends Component {
   render() {
     const { pokemons, loadPokemons, showBtn } = this.props;
-
     return (
       <Fragment>
         <Grid className="margin-section">

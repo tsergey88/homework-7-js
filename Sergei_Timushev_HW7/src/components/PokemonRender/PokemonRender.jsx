@@ -8,8 +8,7 @@ import Col  from 'react-bootstrap/lib/Col';
 
 export default class PokemonRender extends Component {
   render() {
-	  const { name, id, isCaptured, addToCaptured } = this.props;
-
+    const { name, id, isCaptured, addToCaptured } = this.props;
     return (
       <Col xs={12} md={6} lg={4} className="text-center item">
         <div>
