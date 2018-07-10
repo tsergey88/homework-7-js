@@ -11,12 +11,12 @@ class App extends Component {
 	render() {
 		return (
 			<Fragment>
-                <Header />
-                <Switch>
-                    <Route exact path='/' component={PokemonsList} />
-                    <Route exact path='/pokemon/:id' component={PokemonPage} />
-                    <Route exact path='/captured-pokemons' component={Captured}/>
-				</Switch>
+        <Header />
+        <Switch>
+          <Route exact path='/' component={PokemonsList} />
+          <Route exact path='/pokemon/:id' component={PokemonPage} />
+          <Route exact path='/captured-pokemons' component={Captured}/>
+			  </Switch>
 			</Fragment>
 		);
 	}
