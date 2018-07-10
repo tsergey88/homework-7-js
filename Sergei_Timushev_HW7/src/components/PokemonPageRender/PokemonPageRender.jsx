@@ -12,7 +12,7 @@ export default class PokemonPageRender extends Component {
 	render() {
 		const { name, id, status, dateCaptured, captured } = this.props;
 		return (
-            <Grid className="item-block">
+      <Grid className="item-block">
 				<Row className="show-grid">
 					<Col xs={12} md={6} lg={6} mdOffset={3} lgOffset={3} className="text-center">
 					<img src={`https://github.com/epam-js-may-2018/homework-7-js/raw/master/pokemons/${id}.png`} alt={name} />
@@ -27,4 +27,4 @@ export default class PokemonPageRender extends Component {
 			</Grid>
 		);
 	}
-}
+}tabs
